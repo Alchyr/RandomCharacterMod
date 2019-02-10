@@ -34,15 +34,14 @@ public class RandomCharacterMod implements AddCustomModeModsSubscriber, EditStri
     public void receiveEditStrings() {
         String lang = Settings.language.name().toLowerCase();
 
-        File localization = new File(assetPath("localization/" + lang + "/RunModStrings.json"));
-
-        if (localization.exists())
+        switch (Settings.language)
         {
-            BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/" + lang + "/RunModStrings.json"));
-        }
-        else
-        {
-            BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/eng/RunModStrings.json"));
+            case RUS: //put all cases that are implemented here
+                BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/" + lang + "/RunModStrings.json"));
+                break;
+            default:
+                BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/eng/RunModStrings.json"));
+                break;
         }
     }
 
