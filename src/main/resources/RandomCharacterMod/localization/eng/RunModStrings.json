@@ -1,0 +1,6 @@
+{
+  "randomCharMod:RandomCharacter": {
+    "NAME": "Random Character",
+    "DESCRIPTION": "The character you play as will be randomized."
+  }
+}
