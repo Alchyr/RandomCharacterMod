@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.File;
 import java.util.List;
 
 @SpireInitializer
@@ -37,6 +36,7 @@ public class RandomCharacterMod implements AddCustomModeModsSubscriber, EditStri
         switch (Settings.language)
         {
             case RUS: //put all cases that are implemented here
+            case SPA:
                 BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/" + lang + "/RunModStrings.json"));
                 break;
             default:
