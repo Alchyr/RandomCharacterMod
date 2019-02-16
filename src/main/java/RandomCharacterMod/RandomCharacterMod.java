@@ -37,6 +37,7 @@ public class RandomCharacterMod implements AddCustomModeModsSubscriber, EditStri
         {
             case RUS: //put all cases that are implemented here
             case SPA:
+            case POL:
                 BaseMod.loadCustomStringsFile(RunModStrings.class, assetPath("localization/" + lang + "/RunModStrings.json"));
                 break;
             default:
